@@ -3,7 +3,7 @@
     padding: 2rem 0;
     .container{
         max-width: 1400px;
-        overflow: hidden;
+        // overflow: hidden;
         .shopGender{
             display: grid;
             grid-template-columns: repeat(2, 750px);
@@ -56,11 +56,12 @@
         .shopDisplay{
             padding: 2rem 0;
             display: flex;
-            flex-flow: row;
+            flex-flow: row wrap;
             justify-content: space-between;
             .card{
                 img{
-                    height: 80%;
+                    height: auto;
+                    width: 100%;
                 }
                 .picDetails{
                     max-width: 200px;
@@ -80,14 +81,113 @@
 
         .shopAll{
             display: flex;
-            justify-content: space-between;
+            flex-flow: row wrap;
+            justify-content: space-around;
         }
 
         .personalJersey{
             width: 100%;
-            padding-top: 2rem;
+            padding: 2rem 2rem 0;
             text-align: center;
+            a{
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
         }
         
+    }
+}
+
+
+
+
+
+
+
+// TABLETS
+@media only screen and (max-width: 960px){
+    #featured{
+        .container{
+            max-width: 960px;
+            .shopGender{
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr;
+                justify-items: center;
+                text-align: center;
+                height: 14rem;
+                padding: 1rem;
+                .shopOne{
+                    a{
+                        img{
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                }
+                .shopTwo{
+                    a{
+                        img{
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+    
+            .shopDisplay{
+                justify-content: space-around;
+                .card{
+                    min-width: 200px;
+                    padding: 1rem 0;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+// LARGE TABLETS
+@media only screen and (max-width: 1024px){
+    #featured{
+        .container{
+            max-width: 960px;
+            .shopGender{
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr;
+                justify-items: center;
+                text-align: center;
+                height: 14rem;
+                padding: 1rem;
+                .shopOne{
+                    a{
+                        img{
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                }
+                .shopTwo{
+                    a{
+                        img{
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+    
+            .shopDisplay{
+                justify-content: space-around;
+                .card{
+                    min-width: 200px;
+                    padding: 1rem 0;
+                }
+            }
+        }
     }
 }
