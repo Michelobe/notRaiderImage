@@ -2,7 +2,7 @@
     .container{
         display: flex;
         flex-flow: column;
-        max-width: 1000px;
+        max-width: 767px;
         padding: 2rem 0;
         // row 1 =============
         .footerInfo{
@@ -74,6 +74,39 @@
                 &:nth-child(1),
                 &:nth-child(2){
                     border-right: 2px solid black;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    #footer{
+        .container{
+            // row 2
+            .paymentMethod{
+                padding: 4rem 2rem 0 2rem;
+                ul{
+                    // display: flex;
+                    // flex-flow: row;
+                    // justify-content: space-around;
+                    // align-items: center;
+                    li{
+                        &:nth-child(2){
+                            img{
+                                height: 2.25rem;
+                                border-radius: 5px;
+                            }
+                        }
+                        .fab{
+                            font-size: 2.5rem;
+                        }
+                        p{
+                            font-size: .6rem;
+                            text-transform: uppercase;
+                            font-weight: 700;
+                        }
+                    }
                 }
             }
         }

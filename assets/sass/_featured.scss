@@ -6,7 +6,7 @@
         // overflow: hidden;
         .shopGender{
             display: grid;
-            grid-template-columns: repeat(2, 750px);
+            grid-template-columns: repeat(2, 1fr);
             grid-template-rows: 400px;
             grid-gap: 15px;
             .shopOne{
@@ -15,6 +15,12 @@
                 display: inline-block;
                 margin: 0 10px;
                 overflow: hidden;
+                a{
+                    img{
+                        width: 100%;
+                        height: auto;
+                    }
+                }
             }
             .shopTwo{
                 // height: 400px;
@@ -22,6 +28,12 @@
                 display: inline-block;
                 margin: 0 10px;
                 overflow: hidden;
+                a{
+                    img{
+                        width: 100%;
+                        height: auto;
+                    }
+                }
             }
         }
 
