@@ -1,0 +1,81 @@
+#footer{
+    .container{
+        display: flex;
+        flex-flow: column;
+        max-width: 1000px;
+        padding: 2rem 0;
+        // row 1 =============
+        .footerInfo{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            .raiderCol{
+                h3{
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    padding: 0 0 2rem 0;
+                }
+                ul{
+                    li{
+                        font-size: .85rem;
+                        color: #a0a0a0;
+                        text-transform: capitalize;
+                        line-height: 2;
+                        &:hover{
+                            a{
+                                border-bottom: 1px solid black;
+                            }
+                        }
+                        a{
+                            text-decoration: none;
+                            color: #a0a0a0;
+                        }
+                    }
+                }
+            }
+        }
+        // row 2
+        .paymentMethod{
+            padding: 4rem 4rem 0 4rem;
+            ul{
+                display: flex;
+                flex-flow: row;
+                justify-content: space-around;
+                align-items: center;
+                li{
+                    &:nth-child(2){
+                        img{
+                            height: 2.6rem;
+                            border-radius: 5px;
+                        }
+                    }
+                    .fab{
+                        font-size: 3rem;
+                    }
+                    p{
+                        font-size: .8rem;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+        // row 3
+        .copyright{
+            text-align: center;
+            font-size: .7rem;
+            P{
+                padding: 1rem 0;
+            }
+            a{
+                text-decoration: none;
+                color: black;
+                padding: 0 1rem;
+                &:nth-child(1),
+                &:nth-child(2){
+                    border-right: 2px solid black;
+                }
+            }
+        }
+    }
+}
