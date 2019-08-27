@@ -266,6 +266,9 @@
                 grid-template-columns: repeat(2, 1fr);
                 width: 100%;
                 max-width: 1000px;
+                div{
+                padding: .3rem .5rem;
+                }
                 .navMiddle{
                     display: none;
                 }
