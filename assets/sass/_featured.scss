@@ -113,8 +113,46 @@
 }
 
 
-
-
+// LARGE TABLETS
+@media only screen and (max-width: 1024px){
+    #featured{
+        .container{
+            max-width: 960px;
+            .shopGender{
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr;
+                justify-items: center;
+                text-align: center;
+                height: 14rem;
+                padding: 1rem;
+                .shopOne{
+                    a{
+                        img{
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                }
+                .shopTwo{
+                    a{
+                        img{
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+    
+            .shopDisplay{
+                justify-content: space-around;
+                .card{
+                    min-width: 200px;
+                    padding: 1rem 0;
+                }
+            }
+        }
+    }
+}
 
 
 
@@ -159,22 +197,19 @@
     }
 }
 
-
-
-
-
-// LARGE TABLETS
-@media only screen and (max-width: 1024px){
+// PHONES
+@media only screen and (max-width: 767px){
     #featured{
+        padding: 1rem 0;
         .container{
-            max-width: 960px;
+            max-width: 767px;
             .shopGender{
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: 1fr;
-                justify-items: center;
-                text-align: center;
-                height: 14rem;
-                padding: 1rem;
+                // grid-template-columns: 1fr 1fr;
+                // grid-template-rows: 1fr;
+                // justify-items: center;
+                // text-align: center;
+                height: auto;
+                // padding: 1rem;
                 .shopOne{
                     a{
                         img{
@@ -192,14 +227,70 @@
                     }
                 }
             }
+
+            .featuredNav{
+                padding-top: 0;
+                ul{
+                    height: 3.5rem;
+                    padding-top: 1.75rem;
+                    li{
+                        font-size: 1rem;
+                        padding: 0 1rem;
+                        &:hover{
+                            border-bottom: 5px solid black;
+                        }
+                        a{
+                            text-decoration: none;
+                            text-transform: uppercase;
+                            color: #727272;
+                            font-family: 'Open Sans Condensed', sans-serif;
+                            justify-self: center;
+                        }
+                    }
+                }
+            }
     
             .shopDisplay{
+                padding: 2rem 0;
+                display: flex;
+                flex-flow: row wrap;
                 justify-content: space-around;
                 .card{
-                    min-width: 200px;
-                    padding: 1rem 0;
+                    height: auto;
+                    max-width: 50px;
+                    // img{
+                    //     height: auto;
+                    //     width: 100%;
+                    // }
+                    .picDetails{
+                        // max-width: 200px;
+                        display: grid;
+                        justify-content: center;
+                        h5{
+                            padding-bottom: 10px;
+                            font-weight: bold;
+                        }
+                        p{
+                            font-weight: bold;
+                            max-width: 250px;
+                        }
+                    }
+                }
+            }
+
+            .shopAll{
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-around;
+                a{
+                    &:nth-child(1),
+                    &:nth-child(4){
+                        display: none;
+                        position: absolute;
+                    }
                 }
             }
         }
     }
 }
+
