@@ -486,11 +486,13 @@
                         padding: .8rem .5rem;
                         .hoverMenu{
                             max-width: 767px !important;
+                            overflow: auto;
                             top: 7rem;
                             width: 100%;
                             .divisionContainer{
                                 width: 100%;
-                                // overflow: auto;
+                                display: grid;
+                                justify-content: center;
                                 .divisionChoice{
                                     display: none;
                                 }
