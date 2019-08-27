@@ -31,13 +31,8 @@
                 visibility: hidden;
                 position: absolute;
             }
-            .closeButton{
-                visibility: hidden;
-                position: absolute;
-            }
             .mobileMenu{
-                visibility: hidden;
-                position: absolute;
+                display: none;
             }
             .navLeft{
                 display: flex;
@@ -371,12 +366,15 @@
     #topNav{
         .navHeader{
             .container{
-                grid-template-columns: repeat(2, 1fr);
+                // grid-template-columns: repeat(2, 1fr);
+                display: flex;
+                justify-content: flex-end;
                 width: 100%;
                 max-width: 767px;
                 position: relative;
                 .menuButton{
                     visibility: visible;
+                    padding: 1.5rem;
                     .fas{
                         font-size: 2rem;
                         // padding: 1.5rem;
@@ -386,45 +384,35 @@
                             border-bottom: 2px solid gray;
                         }
                     }
-                    &:hover ~ .mobileMenu{
-                        visibility: visible;
-                    }
-                    &:hover ~ .closeButton{
-                        visibility: visible;
-                    }
-                }
-                .closeButton{
-                    position: absolute;
-                    right: 10px;
-                    top: 10px;
-                    font-size: 2rem;
-                    z-index: 100;
-                    color: white;
-                    visibility: hidden;
-                    &:hover{
-                        .mobileMenu{
-                            visibility: hidden;
-                        }
-                    }
-                    i{
-                        padding: .5rem;
-                    }
                 }
                 .mobileMenu{
                     position: absolute;
-                    top: 0;
+                    top: 1px;
                     background: black;
                     color: white;
                     width: 100vw;
                     height: 100vh;
-                    visibility: hidden;
-                    display: flex;
+                    // display: none;
                     flex-flow: column;
                     justify-content: center;
                     align-items: center;
                     z-index: 50;
                     font-size: 2rem;
                     line-height: 1.75;
+                    &.active{
+                        display: flex;
+                    }
+                    .closeButton{
+                        position: absolute;
+                        right: 10px;
+                        top: 1rem;
+                        font-size: 2rem;
+                        z-index: 100;
+                        color: white;
+                        i{
+                            padding: .5rem;
+                        }
+                    }
                 }
                 .navLeft{
                     display: none;
